@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <input type="checkbox" id="themeToggle" hidden />
+  <div class="theme-wrapper">
+    <header>
+      <label for="themeToggle" class="theme-switch">
+        <span class="slider"></span>Dark Mode
+      </label>
+      <h1 class="main-heading">🌤️Weather Dashboard</h1>
+    </header>
+
+    <div class="search-dropdown">
+      <input type="radio" name="city" id="allCities" hidden checked />
+      <input type="radio" name="city" id="jaipur" hidden />
+      <input type="radio" name="city" id="delhi" hidden />
+      <input type="radio" name="city" id="hyderabad" hidden />
+      <input type="radio" name="city" id="chennai" hidden />
+      <input type="radio" name="city" id="mumbai" hidden />
+      <input type="radio" name="city" id="pune" hidden />
+      <input type="radio" name="city" id="bengaluru" hidden />
+      <input type="radio" name="city" id="kolkata" hidden />
+      <input type="radio" name="city" id="lucknow" hidden />
+      <input type="radio" name="city" id="bhopal" hidden />
+
+      <select onchange="document.getElementById(this.value).checked = true">
+        <option value="allCities">Show All Cities</option>
+        <option value="jaipur">Jaipur</option>
+        <option value="delhi">Delhi</option>
+        <option value="hyderabad">Hyderabad</option>
+        <option value="chennai">Chennai</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="pune">Pune</option>
+        <option value="bengaluru">Bengaluru</option>
+        <option value="kolkata">Kolkata</option>
+        <option value="lucknow">Lucknow</option>
+        <option value="bhopal">Bhopal</option>
+        <option value="others">Others</option>
+      </select>
+    </div>
+
+    <div class="weather-scroll">
+      <div class="card jaipur">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2>Jaipur</h2>
+            <i class="wi wi-day-sunny"></i>
+            <p>36°C Sunny</p>
+          </div>
+          <div class="card-back">
+            <p>Humidity: 24%</p>
+            <p>Wind: 10 km/h</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card delhi">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2>Delhi</h2>
+            <i class="wi wi-smog"></i>
+            <p>34°C Hazy</p>
+          </div>
+          <div class="card-back">
+            <p>Humidity: 40%</p>
+            <p>Wind: 12 km/h</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card hyderabad">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2>Hyderabad</h2>
+            <i class="wi wi-day-cloudy"></i>
+            <p>32°C Cloudy</p>
+          </div>
+          <div class="card-back">
+            <p>Humidity: 55%</p>
+            <p>Wind: 8 km/h</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card chennai">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2>Chennai</h2>
+            <i class="wi wi-thunderstorm"></i>
+            <p>30°C Stormy</p>
+          </div>
+          <div class="card-back">
+            <p>Humidity: 70%</p>
+            <p>Wind: 15 km/h</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mumbai">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2>Mumbai</h2>
+            <i class="wi wi-rain"></i>
+            <p>28°C Rainy</p>
+          </div>
+          <div class="card-back">
+            <p>Humidity: 80%</p>
+            <p>Wind: 14 km/h</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card pune">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2>Pune</h2>
+            <i class="wi wi-day-cloudy-high"></i>
+            <p>29°C Overcast</p>
+          </div>
+          <div class="card-back">
+            <p>Humidity: 60%</p>
+            <p>Wind: 10 km/h</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bengaluru">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2>Bengaluru</h2>
+            <i class="wi wi-night-alt-rain"></i>
+            <p>26°C Showers</p>
+          </div>
+          <div class="card-back">
+            <p>Humidity: 85%</p>
+            <p>Wind: 9 km/h</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card kolkata">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2>Kolkata</h2>
+            <i class="wi wi-fog"></i>
+            <p>33°C Foggy</p>
+          </div>
+          <div class="card-back">
+            <p>Humidity: 75%</p>
+            <p>Wind: 13 km/h</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card lucknow">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2>Lucknow</h2>
+            <i class="wi wi-day-haze"></i>
+            <p>35°C Hazy</p>
+          </div>
+          <div class="card-back">
+            <p>Humidity: 42%</p>
+            <p>Wind: 11 km/h</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bhopal">
+        <div class="card-inner">
+          <div class="card-front">
+            <h2>Bhopal</h2>
+            <i class="wi wi-night-alt-cloudy"></i>
+            <p>31°C Cloudy Night</p>
+          </div>
+          <div class="card-back">
+            <p>Humidity: 50%</p>
+            <p>Wind: 10 km/h</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
